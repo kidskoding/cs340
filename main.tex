@@ -1,0 +1,29 @@
+\documentclass{article}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{chngcntr}
+
+\renewcommand{\lstlistingname}{Example}
+
+\AtBeginDocument{
+  \counterwithin{lstlisting}{section}
+  \renewcommand{\thelstlisting}{\thesection.\arabic{lstlisting}}
+}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    frame=single,
+    breaklines=true,
+    captionpos=b
+}
+
+\title{CS 340 - Introduction to Computer Systems}
+\author{Anirudh Konidala}
+\date{January 2026}
+
+\begin{document}
+  \maketitle
+  \include{module-1.tex}
+  \include{module-2.tex}   
+\end{document}
