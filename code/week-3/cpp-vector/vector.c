@@ -54,11 +54,12 @@ int vector_set(vector *vec, size_t index, int value) {
 
 int vector_pop_back(vector *vec) {
     if(vec == NULL || vec->size == 0) {
-        return 0;
+        return -1;
     }
 
+    int val = vec->data[vec->size - 1];
     vec->size--;
-    return 1;
+    return val;
 }
 
 void vector_destroy(vector *vec) {
